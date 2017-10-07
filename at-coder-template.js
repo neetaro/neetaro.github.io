@@ -41,32 +41,32 @@ $(function(){
 	if($(h[11]).get(0))$(h[11]).get(0).onclick = function(){var d = document.getElementById(div[11]);if(d.style.display == "none"){d.style.display = "block";}else{d.style.display = "none";}};
 	
 
-	$(h[0]).nextUntil(end[0]).wrapAll("<div id='"+div[0]+"' style='display:none'>");
-	$(h[1]).nextUntil(end[1]).wrapAll("<div id='"+div[1]+"' style='display:none'>");
-	$(h[2]).nextUntil(end[2]).wrapAll("<div id='"+div[2]+"' style='display:none'>");
-	$(h[3]).nextUntil(end[3]).wrapAll("<div id='"+div[3]+"' style='display:none'>");
-	$(h[4]).nextUntil(end[4]).wrapAll("<div id='"+div[4]+"' style='display:none'>");
-	$(h[5]).nextUntil(end[5]).wrapAll("<div id='"+div[5]+"' style='display:none'>");
-	$(h[6]).nextUntil(end[6]).wrapAll("<div id='"+div[6]+"' style='display:none'>");
-	$(h[7]).nextUntil(end[7]).wrapAll("<div id='"+div[7]+"' style='display:none'>");
-	$(h[8]).nextUntil(end[8]).wrapAll("<div id='"+div[8]+"' style='display:none'>");
-	$(h[9]).nextUntil(end[9]).wrapAll("<div id='"+div[9]+"' style='display:none'>");
-	$(h[10]).nextUntil(end[10]).wrapAll("<div id='"+div[10]+"' style='display:none'>");
-	$(h[11]).nextUntil(end[11]).wrapAll("<div id='"+div[11]+"' style='display:none'>");
+	$(h[0]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[0]+"' style='display:none'>");
+	$(h[1]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[1]+"' style='display:none'>");
+	$(h[2]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[2]+"' style='display:none'>");
+	$(h[3]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[3]+"' style='display:none'>");
+	$(h[4]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[4]+"' style='display:none'>");
+	$(h[5]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[5]+"' style='display:none'>");
+	$(h[6]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[6]+"' style='display:none'>");
+	$(h[7]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[7]+"' style='display:none'>");
+	$(h[8]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[8]+"' style='display:none'>");
+	$(h[9]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[9]+"' style='display:none'>");
+	$(h[10]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[10]+"' style='display:none'>");
+	$(h[11]).nextUntil("h3,h2,h1").wrapAll("<div id='"+div[11]+"' style='display:none'>");
 
 
-	$(h[0]).nextUntil(end[0]).last().append("<p id='"+close[0]+"' onclick='document.getElementById(\""+div[0]+"\").style.display=\"none\";'><a href='"+div[0]+"'>"+linkText+"</a></p>");
-	$(h[1]).nextUntil(end[1]).last().append("<p id='"+close[1]+"' onclick='document.getElementById(\""+div[1]+"\").style.display=\"none\";'><a href='"+div[1]+"'>"+linkText+"</a></p>");
-	$(h[2]).nextUntil(end[2]).last().append("<p id='"+close[2]+"' onclick='document.getElementById(\""+div[2]+"\").style.display=\"none\";'><a href='"+div[2]+"'>"+linkText+"</a></p>");
-	$(h[3]).nextUntil(end[3]).last().append("<p id='"+close[3]+"' onclick='document.getElementById(\""+div[3]+"\").style.display=\"none\";'><a href='"+div[3]+"'>"+linkText+"</a></p>");
-	$(h[4]).nextUntil(end[4]).last().append("<p id='"+close[4]+"' onclick='document.getElementById(\""+div[4]+"\").style.display=\"none\";'><a href='"+div[4]+"'>"+linkText+"</a></p>");
-	$(h[5]).nextUntil(end[5]).last().append("<p id='"+close[5]+"' onclick='document.getElementById(\""+div[5]+"\").style.display=\"none\";'><a href='"+div[5]+"'>"+linkText+"</a></p>");
-	$(h[6]).nextUntil(end[6]).last().append("<p id='"+close[6]+"' onclick='document.getElementById(\""+div[6]+"\").style.display=\"none\";'><a href='"+div[6]+"'>"+linkText+"</a></p>");
-	$(h[7]).nextUntil(end[7]).last().append("<p id='"+close[7]+"' onclick='document.getElementById(\""+div[7]+"\").style.display=\"none\";'><a href='"+div[7]+"'>"+linkText+"</a></p>");
-	$(h[8]).nextUntil(end[8]).last().append("<p id='"+close[8]+"' onclick='document.getElementById(\""+div[8]+"\").style.display=\"none\";'><a href='"+div[8]+"'>"+linkText+"</a></p>");
-	$(h[9]).nextUntil(end[9]).last().append("<p id='"+close[9]+"' onclick='document.getElementById(\""+div[9]+"\").style.display=\"none\";'><a href='"+div[9]+"'>"+linkText+"</a></p>");
-	$(h[10]).nextUntil(end[10]).last().append("<p id='"+close[10]+"' onclick='document.getElementById(\""+div[10]+"\").style.display=\"none\";'><a href='"+div[10]+"'>"+linkText+"</a></p>");
-	$(h[11]).nextUntil(end[11]).last().append("<p id='"+close[11]+"' onclick='document.getElementById(\""+div[11]+"\").style.display=\"none\";'><a href='"+div[11]+"'>"+linkText+"</a></p>");
+	$(h[0]).nextUntil("h3,h2,h1").last().append("<p id='"+close[0]+"' onclick='document.getElementById(\""+div[0]+"\").style.display=\"none\";'><a href='"+div[0]+"'>"+linkText+"</a></p>");
+	$(h[1]).nextUntil("h3,h2,h1").last().append("<p id='"+close[1]+"' onclick='document.getElementById(\""+div[1]+"\").style.display=\"none\";'><a href='"+div[1]+"'>"+linkText+"</a></p>");
+	$(h[2]).nextUntil("h3,h2,h1").last().append("<p id='"+close[2]+"' onclick='document.getElementById(\""+div[2]+"\").style.display=\"none\";'><a href='"+div[2]+"'>"+linkText+"</a></p>");
+	$(h[3]).nextUntil("h3,h2,h1").last().append("<p id='"+close[3]+"' onclick='document.getElementById(\""+div[3]+"\").style.display=\"none\";'><a href='"+div[3]+"'>"+linkText+"</a></p>");
+	$(h[4]).nextUntil("h3,h2,h1").last().append("<p id='"+close[4]+"' onclick='document.getElementById(\""+div[4]+"\").style.display=\"none\";'><a href='"+div[4]+"'>"+linkText+"</a></p>");
+	$(h[5]).nextUntil("h3,h2,h1").last().append("<p id='"+close[5]+"' onclick='document.getElementById(\""+div[5]+"\").style.display=\"none\";'><a href='"+div[5]+"'>"+linkText+"</a></p>");
+	$(h[6]).nextUntil("h3,h2,h1").last().append("<p id='"+close[6]+"' onclick='document.getElementById(\""+div[6]+"\").style.display=\"none\";'><a href='"+div[6]+"'>"+linkText+"</a></p>");
+	$(h[7]).nextUntil("h3,h2,h1").last().append("<p id='"+close[7]+"' onclick='document.getElementById(\""+div[7]+"\").style.display=\"none\";'><a href='"+div[7]+"'>"+linkText+"</a></p>");
+	$(h[8]).nextUntil("h3,h2,h1").last().append("<p id='"+close[8]+"' onclick='document.getElementById(\""+div[8]+"\").style.display=\"none\";'><a href='"+div[8]+"'>"+linkText+"</a></p>");
+	$(h[9]).nextUntil("h3,h2,h1").last().append("<p id='"+close[9]+"' onclick='document.getElementById(\""+div[9]+"\").style.display=\"none\";'><a href='"+div[9]+"'>"+linkText+"</a></p>");
+	$(h[10]).nextUntil("h3,h2,h1").last().append("<p id='"+close[10]+"' onclick='document.getElementById(\""+div[10]+"\").style.display=\"none\";'><a href='"+div[10]+"'>"+linkText+"</a></p>");
+	$(h[11]).nextUntil("h3,h2,h1").last().append("<p id='"+close[11]+"' onclick='document.getElementById(\""+div[11]+"\").style.display=\"none\";'><a href='"+div[11]+"'>"+linkText+"</a></p>");
 	
 
 	console.log("END AtCoder-temp.js");
