@@ -26,9 +26,6 @@ $(function(){
     for(var i=0;i<h.length;i++){
     	console.log('$(h['+i+']).nextUntil(end['+i+']).last().append("<p id=\'"+close['+i+']+"\' onclick=\'document.getElementById(\""+div['+i+']+"\").style.display=\"none\";\'><a href=\'"+div['+i+']+"\'>"+linkText+"</a></p>");');
     }*/
-    for(var i=0;i<end.length;i++){
-    	$(end[i]).hide();
-    }
 
 	if($(h[0]).get(0))$(h[0]).get(0).onclick = function(){var d = document.getElementById(div[0]);if(d.style.display == "none"){d.style.display = "block";}else{d.style.display = "none";}};
 	if($(h[1]).get(0))$(h[1]).get(0).onclick = function(){var d = document.getElementById(div[1]);if(d.style.display == "none"){d.style.display = "block";}else{d.style.display = "none";}};
