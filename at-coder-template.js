@@ -7,7 +7,7 @@ $(function(){
 					"#A-ans-div","#B-ans-div","#C-ans-div","#D-ans-div",
 					"#A-re-div","#B-re-div","#C-re-div","#D-re-div"];
 	var end= ["#A-ques-end","#B-ques-end","#C-ques-end","#D-ques-end",
-					"#A-snd-end","#B-snd-end","#C-snd-end","#D-snd-end",
+					"#A-ans-end","#B-ans-end","#C-ans-end","#D-ans-end",
 					"#A-re-end","#B-re-end","#C-re-end","#D-re-end"];
 	var close = ["#A-ques-close","#B-ques-close","#C-ques-close","#D-ques-close",
 					"#A-ans-close","#B-ans-close","#C-ans-close","#D-ans-close",
