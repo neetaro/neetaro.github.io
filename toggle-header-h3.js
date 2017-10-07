@@ -1,7 +1,4 @@
 $(function(){
-	console.log("START AtCoder-temp.js");
-	
-
 	var headerClass=".toggle-header";
 
 	//閉じるリンク
@@ -29,6 +26,4 @@ $(function(){
     		$(this).parent().hide();
     	})
     });
-
-	console.log("END AtCoder-temp.js");
 })					
