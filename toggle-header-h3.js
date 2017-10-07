@@ -25,8 +25,8 @@ $(function(){
 
     	$(this).nextUntil(nextHeader).wrapAll(divStr);
     	$(this).nextUntil(nextHeader).last().append(str1);
-    	$(this).next().last().click(function(){
-    		$(this).hide();
+    	$(this).next().last().children(":last").click(function(){
+    		$(this).parent().hide();
     	})
     });
 
