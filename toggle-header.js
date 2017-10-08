@@ -1,9 +1,9 @@
 $(function(){
-    //<h2,h3,h4... class="toggle-header" [init="block"][no-close-link="1"]></h2,h3,h4,...>
+    //<h2,h3,h4... class="toggle-header" [data-display="none"][data-clink="1"]></h2,h3,h4,...>
     //セレクタ用
 	var headerClass=":header.toggle-header";
-    var headerAttrForDiv="init";
-    var headerAttrForP="close-link";
+    var headerAttrForDiv="data-display";
+    var headerAttrForP="data-clink";
     
     //閉じるボタンのクラス CSS用に必要かも
     var closeLinkClass = "close-link";
@@ -33,7 +33,7 @@ $(function(){
             });
 
             var init = $(this).attr(headerAttrForDiv);
-            var divStr = "<div style='display:"+((init)?init:"none")+"'>";
+            var divStr = "<div style='display:"+((init)?init:"block")+"'>";
             var linkStr = linkTextPre + $(this).text() + linkTextPost;
         	$(this).nextUntil(nextHeader).wrapAll(divStr);
             if($(this).attr(headerAttrForP)){
