@@ -9,8 +9,8 @@ $(function(){
 
     //閉じるリンクの説明文字
 
-	var linkTextPre="<p class='"+closeLinkClass+"'><a>ここをクリックすると";
-    var linkTextPost = "が閉じます</a></p>";
+	var linkTextPre="<p class='"+closeLinkClass+"'><a>ここをクリックすると『";
+    var linkTextPost = "』が閉じます</a></p>";
 
     var divStr = "<div style='display:none'>";
     $(headerClass).each(function(){
