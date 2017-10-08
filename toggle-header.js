@@ -3,7 +3,7 @@ $(function(){
     //セレクタ用
 	var headerClass=":header.toggle-header";
     var headerAttrForDiv="init";
-    var headerAttrForP="no-close-link";
+    var headerAttrForP="close-link";
     
     //閉じるボタンのクラス CSS用に必要かも
     var closeLinkClass = "close-link";
@@ -37,8 +37,6 @@ $(function(){
             var linkStr = linkTextPre + $(this).text() + linkTextPost;
         	$(this).nextUntil(nextHeader).wrapAll(divStr);
             if($(this).attr(headerAttrForP)){
-                //no close link!
-            }else{
             	$(this).nextUntil(nextHeader).last().append(linkStr);
             	$(this).next().children(":last").click(function(){
             		$(this).parent().hide();
