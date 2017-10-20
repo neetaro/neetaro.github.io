@@ -2,24 +2,31 @@ $(function(){
 	var classSelector = ".next-hidden";
 	var attrForNext = "data-display";
 	var attrNextClass = "data-next-class";
-	var display ="display";
-	var none="none";
-
-	$(classSelector).each(function(){
+	var attrType = "data-type";
+	var attrTime = "data-time";
+	
+	$(classSelector).next().hide().end().each(function(){
 		if($(this).next().length){
-			var init = $(this).attr(attrForNext);
-			$(this).next().css(display,(init)?init:none);
-			$(this).click(function(){
-				if($(this).next().css(display) == none){
-					$(this).next().show();
-				}else{
-					$(this).next().hide();
-				}
-			});
-			var nextClass = $(this).attr(attrNextClass);
-			if(nextClass){
-				$(this).next().addClass(nextClass);
-			}			
+			var time = $(this).attr(attrTime);
+			var toggleArgument = (isNaN(time))?time:Number(time);
+			switch($(this).attr(attrType)){
+				case "slide":
+				$(this).click(function(){
+					$(this).next().slideToggle(toggleArgument);
+				});
+				break;
+				case "fade":
+				$(this).click(function(){
+					$(this).next().fadeToggle(toggleArgument);
+				});
+				break;
+				default:
+				$(this).click(function(){
+					$(this).next().toggle(toggleArgument);
+				});
+				break;
+			}
+			$(this).next().css("display",$(this).attr(attrForNext)).addClass($(this).attr(attrNextClass));			
 		}
-	})
+	});
 })
