@@ -25,9 +25,10 @@ $(function(){
         }
 
         if($(this).nextUntil(nextHeader).length){
+            var init = $(this).attr(attrDisplay);
             var divStr = "<div style='display:"+((init)?init:"block")+"'>";
             $(this).nextUntil(nextHeader).wrapAll(divStr);
-            
+
             var time = $(this).attr(attrTime);
             var toggleArgument = (isNaN(time))?time:Number(time);
             switch($(this).attr(attrType)){
@@ -48,7 +49,7 @@ $(function(){
                 break;
             }
 
-            var init = $(this).attr(attrDisplay);
+            
             
             var linkStr = linkTextPre + $(this).text() + linkTextPost;
         	
