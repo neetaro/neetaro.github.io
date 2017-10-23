@@ -2,8 +2,10 @@ $(function(){
     //<h2,h3,h4... class="toggle-header" [data-display="none"][data-clink="1"]></h2,h3,h4,...>
     //セレクタ用
 	var headerClass=":header.toggle-header";
-    var headerAttrForDiv="data-display";
-    var headerAttrForP="data-clink";
+    var attrDisplay="data-display";
+    var attrCLink="data-clink";
+    var attrType ="data-type";
+    var attrTime = "data-time";
     
     //閉じるボタンのクラス CSS用に必要かも
     var closeLinkClass = "close-link";
@@ -13,7 +15,6 @@ $(function(){
 	var linkTextPre="<p class='"+closeLinkClass+"'><a>ここをクリックすると『";
     var linkTextPost = "』が閉じます</a></p>";
 
-    var divStr = "<div style='display:none'>";
     $(headerClass).each(function(){
 
         var level = this.nodeName.toLowerCase().slice(-1);
@@ -24,23 +25,52 @@ $(function(){
         }
 
         if($(this).nextUntil(nextHeader).length){
-            $(this).click(function(){
-                if($(this).next().css("display")=="none"){
-                    $(this).next().show();
-                }else{
-                    $(this).next().hide();
-                }
-            });
-
-            var init = $(this).attr(headerAttrForDiv);
             var divStr = "<div style='display:"+((init)?init:"block")+"'>";
+            $(this).nextUntil(nextHeader).wrapAll(divStr);
+            
+            var time = $(this).attr(attrTime);
+            var toggleArgument = (isNaN(time))?time:Number(time);
+            switch($(this).attr(attrType)){
+                case "slide":
+                    $(this).click(function(){
+                        $(this).next().slideToggle(toggleArgument);
+                    })
+                break;
+                case "fade":
+                    $(this).click(function(){
+                        $(this).next().fadeToggle(toggleArgument);
+                    })
+                break;
+                default:
+                    $(this).click(function(){
+                        $(this).next().toggle(toggleArgument);
+                    })
+                break;
+            }
+
+            var init = $(this).attr(attrDisplay);
+            
             var linkStr = linkTextPre + $(this).text() + linkTextPost;
-        	$(this).nextUntil(nextHeader).wrapAll(divStr);
-            if($(this).attr(headerAttrForP)){
+        	
+            if($(this).attr(attrCLink)){
             	$(this).nextUntil(nextHeader).last().append(linkStr);
-            	$(this).next().children(":last").click(function(){
-            		$(this).parent().hide();
-            	})
+                switch($(this).attr(attrType)){
+                    case "slide":
+                     $(this).next().children(":last").click(function(){
+                        $(this).parent().slideUp(toggleArgument);
+                    })
+                    break;
+                    case "fade":
+                    $(this).next().children(":last").click(function(){
+                        $(this).parent().fadeOut(toggleArgument);
+                    })
+                    break;
+                    default:
+                	$(this).next().children(":last").click(function(){
+                		$(this).parent().hide(toggleArgument);
+                	})
+                    break;
+                }
             }
         }
     });
