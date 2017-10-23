@@ -1,5 +1,5 @@
 $(function(){
-	$(".gist").next("pre.code").each(funcition(){
+	$(".gist").next("pre.code").each(function(){
 		console.log($(this));
-	})
+	});
 })
